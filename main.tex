@@ -1,0 +1,120 @@
+%Formatvorgabe
+\documentclass[12pt,a4paper,oneside,bibliography=totocnumbered]{scrartcl}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,left=4cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\linespread{1.25}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{\thepage}
+\cfoot{}
+
+%Hier sind die Daten der Seminararbeit
+\newcommand{\MyAuthor}{René Spieker \& Tobias Wäschle (285524)}
+\newcommand{\MyTitel}{SAP ERP - Rechnungswesen (FI, CO)}
+\newcommand{\MyFirma}{Deutsche Telekom AG}
+%\newcommand{\MyMatrikelNummer}{285524}
+\newcommand{\MyBetreuer}{Dr.-Ing. Peter Steininger}
+\newcommand{\MyKurs}{ERP-Systeme}
+\newcommand{\MySemester}{4. Fachsemester}
+\newcommand{\MyStudiengang}{Wirtschaftsinformatik}
+\newcommand{\MyOrt}{Bonn}
+\newcommand{\MyDatum}{\today}
+
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{makeidx}
+\usepackage{floatflt}
+\usepackage{graphicx}
+\usepackage{caption}
+%Abkürzungsverzeichnis z.B. etc.\abk{etc.}{et cetera}
+\usepackage{nomencl}
+\usepackage{paralist}
+
+
+\usepackage{mathptmx}
+\usepackage{natbib}
+\usepackage[hidelinks,
+			pdfauthor={\MyAuthor},
+			pdftitle={\MyTitel},
+			pdfproducer={pdfLaTeX with hyperref},
+			pdfcreator={pdfLaTeX}]{hyperref}
+
+\author{\MyAuthor}
+\title{\MyTitel}
+\date{\MyDatum}
+\makeindex
+\begin{document}
+%Diverse Verzechnisse
+\newpage
+\renewcommand{\thesection}{\Roman{section}}  % I, II, III, IV
+\pagenumbering{Roman}
+%\addsec{Fachwort- und Abkürzungsverzeichnis}
+%\input{includes/fachwortverzeichnis}
+%Titelseite
+\input{includes/titel}
+
+%Weitere Seiten vor dem Hauptteil
+%Sperrvermerk
+%\newpage
+%\thispagestyle{empty}
+%\input{includes/sperrvermerk}
+
+%Inhaltsverzeichnis
+\newpage
+%\thispagestyle{empty}
+\tableofcontents
+
+
+
+\addsec{Tabellenverzeichnis}
+\renewcommand{\listtablename}{} 
+\listoftables
+\newpage
+%\include{includes/tabellenverzeichnis}
+\addsec{Abbildungsverzeichnis}
+\renewcommand{\listfigurename}{} 
+\listoffigures
+%\include{includes/abbildungsverzeichnis}
+\newpage
+
+%%Abkürzungsverzeichnis z.B. etc.\abk{etc.}{et cetera}
+ % Befehl umbenennen in abk
+ \let\abk\nomenclature
+ % Deutsche Überschrift
+ \renewcommand{\nomname}{}
+ % Punkte zw. Abkürzung und Erklärung
+ \setlength{\nomlabelwidth}{.35\hsize}
+ \renewcommand{\nomlabel}[1]{#1 \dotfill}
+ % Zeilenabstände verkleinern
+ \setlength{\nomitemsep}{-\parsep}
+ \makenomenclature
+ \addsec{Fachwort- und Abkürzungsverzeichnis}
+\printnomenclature
+
+%Hauptteil
+\clearpage
+\setcounter{section}{0}
+\renewcommand{\thesection}{\arabic{section}} % 1, 2, 3, 4 ...
+\pagenumbering{arabic}
+
+\input{hauptteil/einleitung}
+\input{hauptteil/grundlagenProjektcontrolling}
+\input{hauptteil/strategischesControlling}
+\input{hauptteil/operativesControlling}
+\input{hauptteil/fazit}
+\input{hauptteil/anhang}
+\renewcommand\refname{Literatur- und Quellenverzeichnis}
+%\nocite{*}
+\bibliographystyle{agsm}
+\bibliography{includes/quellen}
+
+
+
+
+
+
+\lfoot{\LaTeX}
+\end{document}
