@@ -1,6 +1,7 @@
 # TeX/LaTeX intermediates #
 ###########################
 *.*~
+*.nls
 *.aux
 *.log
 *.lof
