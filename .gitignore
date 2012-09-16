@@ -1,12 +1,12 @@
 # TeX/LaTeX intermediates #
 ###########################
+#*.pdf
 *.*~
 *.nls
 *.aux
 *.log
 *.lof
 *.lot
-*.pdf
 *.gz
 *.tmp
 *.xref
