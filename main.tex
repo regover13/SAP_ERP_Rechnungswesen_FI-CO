@@ -24,19 +24,13 @@
 \newcommand{\MyOrt}{Bonn}
 \newcommand{\MyDatum}{\today}
 
-%\usepackage{amsmath}
 
-%\usepackage{amsfonts}
-%\usepackage{amssymb}
-%\usepackage{makeidx}
 \usepackage{floatflt}
 \usepackage{graphicx}
 \usepackage{caption}
 %Abkürzungsverzeichnis z.B. etc.\abk{etc.}{et cetera}
 \usepackage{nomencl}
 \usepackage{paralist}
-
-
 \usepackage{mathptmx}
 \usepackage{natbib}
 \usepackage[hidelinks,
@@ -48,58 +42,35 @@
 \author{\MyAuthor}
 \title{\MyTitel}
 \date{\MyDatum}
-\makeindex
-\begin{document}
-%Diverse Verzechnisse
-\newpage
-\input{includes/titel}
 
+% Befehl für Abkürzungen umbenennen in abk
+\let\abk\nomenclature
+
+\makeindex
+
+
+
+\begin{document}
+
+%Titelseite
+\input{includes/titel}
+\newpage
+ 
 \renewcommand{\thesection}{\Roman{section}}  % I, II, III, IV
 \pagenumbering{Roman}
-%\addsec{Fachwort- und Abkürzungsverzeichnis}
-%\input{includes/fachwortverzeichnis}
-%Titelseite
 
 %Weitere Seiten vor dem Hauptteil
 %Sperrvermerk
-%\newpage
-%\thispagestyle{empty}
-%\input{includes/sperrvermerk}
+\thispagestyle{empty}
+\input{includes/sperrvermerk}
 
 %Inhaltsverzeichnis
 \newpage
 %\thispagestyle{empty}
 \tableofcontents
-
-
-\newpage
-\addsec{Tabellenverzeichnis}
-\renewcommand{\listtablename}{} 
-\listoftables
-\newpage
-%\include{includes/tabellenverzeichnis}
-\addsec{Abbildungsverzeichnis}
-\renewcommand{\listfigurename}{} 
-\listoffigures
-%\include{includes/abbildungsverzeichnis}
-\newpage
-
-%%Abkürzungsverzeichnis z.B. etc.\abk{etc.}{et cetera}
- % Befehl umbenennen in abk
- \let\abk\nomenclature
- % Deutsche Überschrift
- \renewcommand{\nomname}{}
- % Punkte zw. Abkürzung und Erklärung
- \setlength{\nomlabelwidth}{.35\hsize}
- \renewcommand{\nomlabel}[1]{#1 \dotfill}
- % Zeilenabstände verkleinern
- \setlength{\nomitemsep}{-\parsep}
- \makenomenclature
- \addsec{Fachwort- und Abkürzungsverzeichnis}
-\printnomenclature
+\clearpage
 
 %Hauptteil
-\clearpage
 \setcounter{section}{0}
 \renewcommand{\thesection}{\arabic{section}} % 1, 2, 3, 4 ...
 \pagenumbering{arabic}
@@ -110,32 +81,44 @@
 \input{hauptteil/scp}
 \input{hauptteil/fazit}
 \input{hauptteil/anhang}
+
+\newpage
+%%Abkürzungsverzeichnis z.B. etc.\abk{etc.}{et cetera}
+ % Deutsche Überschrift
+ \renewcommand{\nomname}{}
+ % Punkte zw. Abkürzung und Erklärung
+ \setlength{\nomlabelwidth}{.35\hsize}
+ \renewcommand{\nomlabel}[1]{#1 \dotfill}
+ % Zeilenabstände verkleinern
+ \setlength{\nomitemsep}{-\parsep} 
+ \makenomenclature
+\section{Fachwort- und Abkürzungsverzeichnis}
+\printnomenclature
+\newpage
+
+%tabellenverzeichnis
+\section{Abbildungsverzeichnis}
+%\addsec{Abbildungsverzeichnis}
+\renewcommand{\listfigurename}{} 
+\listoffigures
+\newpage
+
+%abbildungsverzeichnis
+\section{Tabellenverzeichnis}
+\renewcommand{\listtablename}{} 
+\listoftables
+\newpage
+
+%Literaturverzeichnis
 \renewcommand\refname{Literatur- und Quellenverzeichnis}
 \nocite{*}
 \bibliographystyle{agsm}
 \bibliography{includes/quellen}
+\newpage
 
-\clearpage
-
-\section*{Ehrenwörtliche Erklärung}
-Hiermit versichere ich, dass die vorliegende Arbeit von mir selbstständig und 
-ohne unerlaubte Hilfe angefertigt worden ist, insbesondere dass ich alle Stellen, die wörtlich oder annähernd wörtlich aus Veröffentlichungen entnommen sind, durch Zitate als solche gekennzeichnet habe. Ich versichere auch, dass die von mir eingereichte schriftliche Version mit der digitalen Version übereinstimmt. 
-Weiterhin erkläre ich, dass die Arbeit in gleicher oder ähnlicher Form noch keiner anderen Prüfungsbehörde vorgelegen hat. Ich erkläre mich damit einverstanden/nicht einverstanden, dass die Arbeit der Öffentlichkeit zugänglich gemacht wird. Ich erkläre mich damit einverstanden, dass die Digitalversion dieser Arbeit zwecks Plagiatsprüfung auf die Server externer Anbieter hoch geladen werden darf. Die Plagiatsprüfung stellt keine Zurverfügungstellung für die Öffentlichkeit dar. \\
-
-
-
-\noindent(Ort, Datum)\qquad\qquad\qquad (Eigenhändige Unterschrift)
-
-
-\section*{Declaration in lieu of oath}
-I hereby declare that I produced the submitted paper with no assistance from any other party and without the use of any unauthorized aids and, in particular, that I have marked as quotations all passages, which are reproduced verbatim or nearby-verbatim from publications. Also, I declare that the submitted print version of this thesis is identical with  its digital version. Further, I declare that this thesis has never been submitted before to any other examination board in either its present form or in any other similar version. I herewith agree/disagree that this thesis may be published. 
-I herewith consent that this thesis may be uploaded to the server of external contractors for the purpose of submitting it to the contractors’ plagiarism detection systems. Uploading this thesis for the purpose of submitting it to plagiarism detection systems is not a form of publication. \\
-
-
-
-\noindent(Ort, Datum)\qquad\qquad\qquad (Eigenhändige Unterschrift)
-
-
+%ehrenwoertliche erklaerung
+\thispagestyle{empty}
+\input{includes/ehrenwoertlicheErklaerung}
 
 \lfoot{\LaTeX}
 \end{document}
