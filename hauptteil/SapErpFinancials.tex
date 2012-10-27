@@ -1,6 +1,3 @@
-%\abk{Balanced Scorecard}{ausgewogener Berichtsbogen zur Unterstützung der Operationalisierung und Implementierung der Strategie\footnote{Vgl. \cite{kaplan1997}, passim}}
-%\abk{Projekt-Scorecard}{auf die Belange der Projektarbeit angepasste Balanced Scorecard}
-
 \section{Rechnungswesen mit SAP ERP Financials}
 \subsection{Komponenten}
 Das Ziel von ERP-Systemen (Enterprise Resource Planning \abk{ERP}{Enterprise Resource Planning}) ist die Erfassung aller wesentlichen betrieblichen Abläufe zur Planung, Dokumentation und Steuerung. Die ERP-Software der Firma SAP ist eine branchenübergreifende Standardlösung, die sich an unterschiedlichste Anforderungen verschiedener Unternehmen anpassen lässt (Customizing\abk{Customizing}{Softwareanpassung an betriebs- und branchenspezifische Vorgaben}). Die Anwendungen erlauben eine ganzheitliche Abwicklung von abteilungs- und\\bereichsübergreifenden Prozessen der organisatorischen Einheit. Die Struktur von SAP ERP orientiert sich an den klassischen betriebswirtschaftlichen Funktionen eines Unternehmens. Auf der obersten Ebene finden sich die funktionalen Sichten:
@@ -11,13 +8,13 @@ Das Ziel von ERP-Systemen (Enterprise Resource Planning \abk{ERP}{Enterprise Res
 \item Produktion
 \item Vertrieb
 \end{compactitem}
-Diese Struktur wird weiter in Komponenten, Unterkomponenten und Transaktionen aufgeteilt. Während die Firma SAP für diese Komponenten des bereits 1992 erschienenen SAP R/3 noch klare Modulbezeichnungen etabliert hat, verzichtet sie im heutigen Marketing der Weiterentwicklung SAP ERP darauf\footnote{Vgl. \cite{Klein2010}, S. 9 f.} \footnote{Vgl. \cite{Hefner2001}, S. 25}. Für eine exakte Einordnung im Themenkomplex, werden in dieser Arbeit auch die Modulbezeichnungen beigefügt.
+Diese Struktur wird weiter in Komponenten, Unterkomponenten und Transaktionen aufgeteilt. Während die Firma SAP für diese Komponenten des bereits 1992 erschienenen SAP R/3 noch klare Modulbezeichnungen etabliert hat, verzichtet sie im heutigen Marketing der Weiterentwicklung SAP ERP darauf\footnote{Vgl. \cite{Klein2010}, S. 9 f.}\footnote{Vgl. \cite{Hefner2001}, S. 25}. Für eine exakte Einordnung im Themenkomplex, werden in dieser Arbeit auch die Modulbezeichnungen beigefügt.
 
 SAP ERP Financials als Teil von SAP ERP ist die Anwendung für die Unternehmenssicht Finanzen. Diese Arbeit konzentriert sich auf das Rechnungswesen mit SAP ERP Financials, welches in den Komponenten Financial Accounting (FI) und Management Accounting (CO) abgebildet und in den folgenden Kapiteln näher behandelt wird\footnote{Vgl. \cite{Patel2009}, S. 23}.
 
 \subsection{Konzernstruktur}
 Bei der Einführung eines SAP ERP-Systems müssen die betrieblichen Organisationsstrukturen, die sich aus unterschiedlichen Gesellschaften und operativen Einheiten eines Konzerns zusammensetzt, in diesem abgebildet werden.
-Im Folgenden werden die Organisationseinheiten des internen und externen Rechnungswesens beschrieben.
+Im Folgenden werden die Organisationseinheiten des internen und externen Rechnungswesens beschrieben. Abbildung~\ref{abb2} auf Seite \pageref{abb2} zeigt ein Beispiel einer Konzernstruktur im SAP Rechnungswesen.
 
 Der Mandant stellt die oberste Konzernhierarchieebene dar und bildet ein Konzernunternehmen mit allen zugehörigen Gesellschaften ab, deren Ergebnisse in das Konzernergebnis einfließen. Gesellschaftsübergreifende Daten und Parameter werden auf Mandantenebene abgelegt.
 
@@ -31,7 +28,14 @@ Für einzelne Segmente, die durch klassifizierende Merkmale beschrieben werden (
 
 Um die Betriebsaufwendungen der GuV im Umsatzkostenverfahren entsprechend betrieblicher Funktionen wie Finanzen, Personalwirtschaft, Beschaffung und Logistik, Produktion oder Vertrieb gruppiert auszuweisen, kann die Organisationseinheit Funktionsbereich verwendet werden.
 
->>Bild einfügen
+\begin{figure}[htbp]
+\includegraphics[width=1\textwidth]{Images/konzernStruktur.png}
+\begin{center}
+   {\footnotesize In Anlehnung an: \cite{Hefner2001}, S. 100}
+   \caption[Konzernstruktur in SAP ERP Financials]{Konzernstruktur in SAP ERP Financials}\label{abb2}
+\end{center}
+\end{figure}\noindent
+
 
 \footnote{Vgl. \cite{Hefner2001}, S. 99 ff.}\footnote{Vgl. \cite{Friedl2008}, S. 29 ff.}\footnote{Vgl. \cite{Maassen2006}, S. 71 ff.}\footnote{Vgl. \cite{Patel2009}, S. 37 ff.}\footnote{Vgl. \cite{Padhi2011}, S. 16} 
 
@@ -51,12 +55,12 @@ Um die Betriebsaufwendungen der GuV im Umsatzkostenverfahren entsprechend betrie
 \abk{Internal Order Accounting}{dt. Innenaufträge (SAP CO-OM-OPA)}
 
 \subsubsection{Product Cost Accounting}
-\abk{Product Cost Controlling}{dt. Produktkosten-Controlling (CO-PC}
+\abk{Product Cost Controlling}{dt. Produktkosten-Controlling (CO-PC)}
 
 \subsubsection{Profitability Analysis} %CO-PA
-\abk{Profitability Analysis}{dt. Ergebnis- und Marktsegmentrechnung (SAP CO-PA}
+\abk{Profitability Analysis}{dt. Ergebnis- und Marktsegmentrechnung (SAP CO-PA)}
 
-\abk{Profit Center Accounting}{EC-PCA}
+\abk{Profit Center Accounting}{Profit-Center Rechnung (EC-PCA)}
 
 
 
