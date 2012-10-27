@@ -3,16 +3,49 @@
 
 \section{Rechnungswesen mit SAP ERP Financials}
 \subsection{Komponenten}
+Das Ziel von ERP-Systemen (Enterprise Resource Planning \abk{ERP}{Enterprise Resource Planning}) ist die Erfassung aller wesentlichen betrieblichen Abläufe zur Planung, Dokumentation und Steuerung. Die ERP-Software der Firma SAP ist eine branchenübergreifende Standardlösung, die sich an unterschiedlichste Anforderungen verschiedener Unternehmen anpassen lässt (Customizing\abk{Customizing}{Softwareanpassung an betriebs- und branchenspezifische Vorgaben}). Die Anwendungen erlauben eine ganzheitliche Abwicklung von abteilungs- und\\bereichsübergreifenden Prozessen der organisatorischen Einheit. Die Struktur von SAP ERP orientiert sich an den klassischen betriebswirtschaftlichen Funktionen eines Unternehmens. Auf der obersten Ebene finden sich die funktionalen Sichten:
+\begin{compactitem}
+\item Finanzen
+\item Personalwirtschaft
+\item Beschaffung und Logistik
+\item Produktion
+\item Vertrieb
+\end{compactitem}
+Diese Struktur wird weiter in Komponenten, Unterkomponenten und Transaktionen aufgeteilt. Während die Firma SAP für diese Komponenten des bereits 1992 erschienenen SAP R/3 noch klare Modulbezeichnungen etabliert hat, verzichtet sie im heutigen Marketing der Weiterentwicklung SAP ERP darauf\footnote{Vgl. \cite{Klein2010}, S. 9 f.} \footnote{Vgl. \cite{Hefner2001}, S. 25}. Für eine exakte Einordnung im Themenkomplex, werden in dieser Arbeit auch die Modulbezeichnungen beigefügt.
+
+SAP ERP Financials als Teil von SAP ERP ist die Anwendung für die Unternehmenssicht Finanzen. Diese Arbeit konzentriert sich auf das Rechnungswesen mit SAP ERP Financials, welches in den Komponenten Financial Accounting (FI) und Management Accounting (CO) abgebildet und in den folgenden Kapiteln näher behandelt wird\footnote{Vgl. \cite{Patel2009}, S. 23}.
+
 \subsection{Konzernstruktur}
-\subsection{Financial Accounting} %FI
-\subsubsection{General Ledger} %Hauptbuch FI-GL
+Bei der Einführung eines SAP ERP-Systems müssen die betrieblichen Organisationsstrukturen, die sich aus unterschiedlichen Gesellschaften und operativen Einheiten eines Konzerns zusammensetzt, in diesem abgebildet werden.
+Im Folgenden werden die Organisationseinheiten des internen und externen Rechnungswesens beschrieben.
+
+Der Mandant stellt die oberste Konzernhierarchieebene dar und bildet ein Konzernunternehmen mit allen zugehörigen Gesellschaften ab, deren Ergebnisse in das Konzernergebnis einfließen. Gesellschaftsübergreifende Daten und Parameter werden auf Mandantenebene abgelegt.
+
+Die wichtigsten Organisationseinheiten innerhalb eines Mandanten sind die Buchungskreise. Unter einem Buchungskreis versteht man in SAP ERP Financials selbständig bilanzierende Einheiten der Finanzbuchhaltung. Jeder Buchungskreis erhält eine eigene Bilanz und GuV (Gewinn- und Verlustrechnung)\abk{GuV}{Gewinn- und Verlustrechnung}. Die Konzernabschlüsse werden ja Buchungskreis nach den geltenden gesetzlichen Anforderungen erstellt. Wenn die Unternehmung/Konzern nur aus einer Einheit zusammengesetzt sein sollte, wird in SAP ERP Financials mindestens ein Buchungskreis eingerichtet.
+
+Die Organisationsebene Geschäftsbereich wird zu Auswertungszwecken eingesetzt. Er wird nicht mehr weiter entwickelt und diente als zusätzliche Möglichkeit, Konzernabschlüsse auf Grundlage zentraler operativer Bereiche (z. B. Produktlinien, Zweigstellen oder strategische Geschäftseinheiten) zu erstellen, welche jedoch nicht den Anforderungen externer Bilanzen und GuV entsprechen. In neueren Implementierungen wird für die Segmentberichterstattung auf andere Organisationseinheiten (z. B. Profit-Center oder Segmente) zurückgegriffen.
+
+Profit-Center sind verwaltungsorientierte Konzernstrukturen (z. B. Bereiche oder Abteilungen). Profit-Center ermöglichen, anhand der Gegenüberstellung gebuchter Kosten und Erlöse, eigene interne Betriebsergebnisse und Abschlüsse.
+
+Für einzelne Segmente, die durch klassifizierende Merkmale beschrieben werden (z. B. Artikelgruppe, Kundengruppe, Land, Vertriebsweg), kann ein Ergebnis ausgewiesen werden. Die Segmente werden deshalb Ergebnisobjekte genannt. Obwohl bei der Definition von Segmenten keine Einschränkungen gelten, werden sie in der Regel von Profit-Centern abgeleitet und dienen in allen Gesellschaften zu Berichtszwecken. 
+
+Um die Betriebsaufwendungen der GuV im Umsatzkostenverfahren entsprechend betrieblicher Funktionen wie Finanzen, Personalwirtschaft, Beschaffung und Logistik, Produktion oder Vertrieb gruppiert auszuweisen, kann die Organisationseinheit Funktionsbereich verwendet werden.
+
+>>Bild einfügen
+
+\footnote{Vgl. \cite{Hefner2001}, S. 99 ff.}\footnote{Vgl. \cite{Friedl2008}, S. 29 ff.}\footnote{Vgl. \cite{Maassen2006}, S. 71 ff.}\footnote{Vgl. \cite{Patel2009}, S. 37 ff.}\footnote{Vgl. \cite{Padhi2011}, S. 16} 
+
+
+
+\subsection{Financial Accounting (FI)} %FI
+\subsubsection{General Ledger} %Hauptbuch FI-GL -- #### ERST GEGEN ENDE SCHREIBEN!! Das neue Hauptbuch in FI vereint Funktionen aus FI und CO
 \subsubsection{Accounts receivable and payable} %Debitoren FI-AR %Kreditoren FI-AP
 \subsubsection{Tax Accounting} %Steuern
 
 \subsubsection{Bank Accounting} %Bankbuchhaltung FI-BL
 \subsubsection{Asset Accounting} %Anlagenbuchhaltung FI-AA
 
-\subsection{Management Accounting} %CO
+\subsection{Management Accounting (CO)} %CO
 \subsubsection{Overhead Cost Controlling}
 \abk{Cost Center Accounting}{dt. Kostenstellenrechnung (SAP CO-OM-CCA)}
 \abk{Internal Order Accounting}{dt. Innenaufträge (SAP CO-OM-OPA)}
