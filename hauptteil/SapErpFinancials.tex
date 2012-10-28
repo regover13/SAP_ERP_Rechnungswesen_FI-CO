@@ -25,7 +25,7 @@ Bei der Einführung eines SAP ERP-Systems müssen die betrieblichen Organisation
 Im Folgenden werden die Organisationseinheiten des internen und externen Rechnungswesens beschrieben. Abbildung~\ref{abb2} auf Seite \pageref{abb2} zeigt ein Beispiel einer Konzernstruktur im SAP Rechnungswesen.
 
 Der Mandant stellt die oberste Konzernhierarchieebene dar und bildet ein Konzernunternehmen mit allen zugehörigen Gesellschaften ab, deren Ergebnisse in das Konzernergebnis einfließen. Gesellschaftsübergreifende Daten und Parameter werden auf Mandantenebene abgelegt.
-
+%################## Kostenrechnungkreis?? #############
 Die wichtigsten Organisationseinheiten innerhalb eines Mandanten sind die Buchungskreise. Unter einem Buchungskreis versteht man in SAP ERP Financials selbständig bilanzierende Einheiten der Finanzbuchhaltung. Jeder Buchungskreis erhält eine eigene Bilanz und GuV (Gewinn- und Verlustrechnung)\abk{GuV}{Gewinn- und Verlustrechnung}. Die Konzernabschlüsse werden ja Buchungskreis nach den geltenden gesetzlichen Anforderungen erstellt. Wenn die Unternehmung/Konzern nur aus einer Einheit zusammengesetzt sein sollte, wird in SAP ERP Financials mindestens ein Buchungskreis eingerichtet.
 
 Die Organisationsebene Geschäftsbereich wird zu Auswertungszwecken eingesetzt. Er wird nicht mehr weiter entwickelt und diente als zusätzliche Möglichkeit, Konzernabschlüsse auf Grundlage zentraler operativer Bereiche (z. B. Produktlinien, Zweigstellen oder strategische Geschäftseinheiten) zu erstellen, welche jedoch nicht den Anforderungen externer Bilanzen und GuV entsprechen. In neueren Implementierungen wird für die Segmentberichterstattung auf andere Organisationseinheiten (z. B. Profit-Center oder Segmente) zurückgegriffen.
@@ -34,7 +34,9 @@ Profit-Center sind verwaltungsorientierte Konzernstrukturen (z. B. Bereiche oder
 
 Für einzelne Segmente, die durch klassifizierende Merkmale beschrieben werden (z. B. Artikelgruppe, Kundengruppe, Land, Vertriebsweg), kann ein Ergebnis ausgewiesen werden. Die Segmente werden deshalb Ergebnisobjekte genannt. Obwohl bei der Definition von Segmenten keine Einschränkungen gelten, werden sie in der Regel von Profit-Centern abgeleitet und dienen in allen Gesellschaften zu Berichtszwecken. 
 
-Um die Betriebsaufwendungen der GuV im Umsatzkostenverfahren entsprechend betrieblicher Funktionen wie Finanzen, Personalwirtschaft, Beschaffung und Logistik, Produktion oder Vertrieb gruppiert auszuweisen, kann die Organisationseinheit Funktionsbereich verwendet werden\footnote{Vgl. \cite{Hefner2001}, S. 99 ff.}\footnote{Vgl. \cite{Friedl2008}, S. 29 ff.}\footnote{Vgl. \cite{Maassen2006}, S. 71 ff.}\footnote{Vgl. \cite{Patel2009}, S. 37 ff.}\footnote{Vgl. \cite{Padhi2011}, S. 16}.
+Um die Betriebsaufwendungen der GuV im Umsatzkostenverfahren entsprechend betrieblicher Funktionen wie Finanzen, Personalwirtschaft, Beschaffung und Logistik, Produktion oder Vertrieb gruppiert auszuweisen, kann die Organisationseinheit Funktionsbereich verwendet werden.
+
+In der Komponente Management Accounting (CO) ist die zentrale Organisationseinheit der Kostenrechnungskreis. Ein Kostenrechnungskreis wird für alle organisatorischen Einheiten vergeben, für die eine vollständige, in sich geschlossene Kostenrechnung durchgeführt werden soll\footnote{Vgl. \cite{Hefner2001}, S. 99 ff.}\footnote{Vgl. \cite{Friedl2008}, S. 29 ff.}\footnote{Vgl. \cite{Maassen2006}, S. 71 ff.}\footnote{Vgl. \cite{Patel2009}, S. 37 ff.}\footnote{Vgl. \cite{Padhi2011}, S. 16}\footnote{Vgl. \cite{SAPFI2001}, S. 18}.
 
 \begin{figure}[htbp]
 \includegraphics[width=1\textwidth]{Images/konzernStruktur.png}
@@ -57,9 +59,16 @@ Um die Betriebsaufwendungen der GuV im Umsatzkostenverfahren entsprechend betrie
 \subsubsection{Asset Accounting} %Anlagenbuchhaltung FI-AA
 
 \subsection{Management Accounting (CO)} %CO
+Die Komponente Management Accounting (Controlling -- CO) bildet die, in Kapitel \ref{ssec:internesRechnungswesen} internes Rechnungswesen auf Seite \pageref{ssec:internesRechnungswesen}, beschriebenen Funktionen in SAP ERP Financials ab. Alle Komponenten der Finanzbuchhaltung und Kostenrechnung sind vollständig integriert. Mithilfe des Kostenrechnungskreises können Sie Ihr Unternehmen im Hinblick auf die Kostenrechnung im SAP-System buchungskreisübergreifend struktuieren\footnote{Vgl. \cite{Patel2009}, S. 291}. SAP ERP stellt verschiedenen Kostenträger zur Verfügung, um alle anfallenden Kosten und Erlöse möglichst exakt darstellen zu können. Der Begriff Kostenträger bzw. Kostensammler beschreibt Objekte wie Kostenstellen, Kostenarten und Innenaufträge\footnote{Vgl. \cite{Patel2009}, S. 208}. 
+
+Die Kostenstellen in SAP werden unterhalb eines Kostenrechnungskreises in einer Kostenstellenhierarchie organisiert und entsprechen in der Regel der Struktur eines Unternehmens im Hinblick auf Büros, Abteilungen, Bereiche und Standorte. Der Kostenstellenverantwortliche wird in den Stammdaten der Kostenstellen hinterlegt und verantwortet sowohl die präzise Aufzeichnung und Abrechnung von Kosten in ihren Kostenstellen, sowie die Einhaltung des vorgesehenen Budgets\footnote{Vgl. \cite{Patel2009}, S. 296 f.}. Die Integration, z. B. die automatische Kostenstellenfindung in anderen SAP Komponenten, wird durch eine Zuordnung der Organisationseinheiten wie einem Buchungskreis oder einem Profit-Center ermöglicht.
+
 \subsubsection{Overhead Cost Controlling}
 \abk{Cost Center Accounting}{dt. Kostenstellenrechnung (SAP CO-OM-CCA)}
 \abk{Internal Order Accounting}{dt. Innenaufträge (SAP CO-OM-OPA)}
+\abk{Profit Center Accounting}{Profit-Center Rechnung (EC-PCA)}
+\abk{Overhead Cost Controlling}{dt. Gemeinkostenrechnung}
+Overhead Cost Controlling (dt. Gemeinkostenrechnung) ist vor allem den Gemeinkosten gewidmet. Gemeinkosten werden in der Regel Kosten bezeichnet, die im Gegensatz zu den direkten Kosten, nicht direkt den Produkten oder Dienstleistungen zugeordnet werden können. Eine genaue Aufzeichnung, Analyse, Verrechnung und Buchung von Gemeinkosten ist sehr komplex. 
 
 \subsubsection{Product Cost Accounting}
 \abk{Product Cost Controlling}{dt. Produktkosten-Controlling (CO-PC)}
@@ -67,7 +76,9 @@ Um die Betriebsaufwendungen der GuV im Umsatzkostenverfahren entsprechend betrie
 \subsubsection{Profitability Analysis} %CO-PA
 \abk{Profitability Analysis}{dt. Ergebnis- und Marktsegmentrechnung (SAP CO-PA)}
 
-\abk{Profit Center Accounting}{Profit-Center Rechnung (EC-PCA)}
+
+
+
 
 
 
