@@ -21,6 +21,13 @@ SAP ERP Financials als Teil von SAP ERP ist die Anwendung für die Unternehmenss
 Diese Arbeit konzentriert sich auf das Rechnungswesen (FI, CO) mit SAP ERP Financials, welches in den Komponenten Financial Accounting (FI) und Management Accounting (CO) abgebildet und in den folgenden Kapiteln näher behandelt wird\footnote{Vgl. \cite{Patel2009}, S. 23}.
 
 \subsection{Konzernstruktur}
+\begin{figure}[htbp]
+\includegraphics[width=1\textwidth]{Images/konzernStruktur.png}
+\begin{center}
+   %{\footnotesize In Anlehnung an: \cite{Hefner2001}, S. 100}
+   \caption[Konzernstruktur in SAP ERP Financials]{Konzernstruktur in SAP ERP Financials}\label{abb2}
+\end{center}
+\end{figure}\noindent
 Bei der Einführung eines SAP ERP-Systems müssen die betrieblichen Organisationsstrukturen, die sich aus unterschiedlichen Gesellschaften und operativen Einheiten eines Konzerns zusammensetzt, in diesem abgebildet werden.
 Im Folgenden werden die Organisationseinheiten des internen und externen Rechnungswesens beschrieben. Abbildung~\ref{abb2} auf Seite \pageref{abb2} zeigt ein Beispiel einer Konzernstruktur im SAP Rechnungswesen.
 
@@ -38,13 +45,7 @@ Um die Betriebsaufwendungen der GuV im Umsatzkostenverfahren entsprechend betrie
 
 In der Komponente Management Accounting (CO) ist die zentrale Organisationseinheit der Kostenrechnungskreis. Ein Kostenrechnungskreis wird für alle organisatorischen Einheiten vergeben, für die eine vollständige, in sich geschlossene Kostenrechnung durchgeführt werden soll\footnote{Vgl. \cite{Hefner2001}, S. 99 ff.}\footnote{Vgl. \cite{Friedl2008}, S. 29 ff.}\footnote{Vgl. \cite{Maassen2006}, S. 71 ff.}\footnote{Vgl. \cite{Patel2009}, S. 37 ff.}\footnote{Vgl. \cite{Padhi2011}, S. 16}\footnote{Vgl. \cite{SAPFI2001}, S. 18}.
 
-\begin{figure}[htbp]
-\includegraphics[width=1\textwidth]{Images/konzernStruktur.png}
-\begin{center}
-   %{\footnotesize In Anlehnung an: \cite{Hefner2001}, S. 100}
-   \caption[Konzernstruktur in SAP ERP Financials]{Konzernstruktur in SAP ERP Financials}\label{abb2}
-\end{center}
-\end{figure}\noindent
+
 
 
 
@@ -59,6 +60,13 @@ In der Komponente Management Accounting (CO) ist die zentrale Organisationseinhe
 \subsubsection{Asset Accounting} %Anlagenbuchhaltung FI-AA
 
 \subsection{Management Accounting (CO)} %CO
+\begin{floatingfigure}[htbpr]{0.43\textwidth} 
+\includegraphics[width=0.5\textwidth]{Images/kostenRechnungskreis.png}
+\begin{flushright}
+   %{\footnotesize In Anlehnung an: \cite{Hefner2001}, S. 100}
+   \caption[Kostenrechnungskreis in SAP ERP Financials]{Kostenrechnungskreis in SAP ERP Financials}\label{abb3}
+\end{flushright}
+\end{floatingfigure}\noindent
 Die Komponente Management Accounting (Controlling -- CO) bildet die, in Kapitel \ref{ssec:internesRechnungswesen} internes Rechnungswesen auf Seite \pageref{ssec:internesRechnungswesen}, beschriebenen Funktionen in SAP ERP Financials ab. Alle Komponenten der Finanzbuchhaltung und Kostenrechnung sind vollständig integriert. Mithilfe des Kostenrechnungskreises können Sie Ihr Unternehmen im Hinblick auf die Kostenrechnung im SAP-System buchungskreisübergreifend struktuieren\footnote{Vgl. \cite{Patel2009}, S. 291}. SAP ERP stellt verschiedenen Kostenträger zur Verfügung, um alle anfallenden Kosten und Erlöse möglichst exakt darstellen zu können. Der Begriff Kostenträger bzw. Kostensammler beschreibt Objekte wie Kostenstellen, Kostenarten und Innenaufträge\footnote{Vgl. \cite{Patel2009}, S. 208}. 
 
 Die Kostenstellen in SAP werden unterhalb eines Kostenrechnungskreises in einer Kostenstellenhierarchie organisiert und entsprechen in der Regel der Struktur eines Unternehmens im Hinblick auf Büros, Abteilungen, Bereiche und Standorte. Der Kostenstellenverantwortliche wird in den Stammdaten der Kostenstellen hinterlegt und verantwortet sowohl die präzise Aufzeichnung und Abrechnung von Kosten in ihren Kostenstellen, sowie die Einhaltung des vorgesehenen Budgets\footnote{Vgl. \cite{Patel2009}, S. 296 f.}. Die Integration, z. B. die automatische Kostenstellenfindung in anderen SAP Komponenten, wird durch eine Zuordnung der Organisationseinheiten wie einem Buchungskreis oder einem Profit-Center ermöglicht.
