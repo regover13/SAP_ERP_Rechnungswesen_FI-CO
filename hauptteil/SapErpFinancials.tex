@@ -22,14 +22,15 @@ Diese Arbeit konzentriert sich auf das Rechnungswesen (FI, CO) mit SAP ERP Finan
 
 \subsection{Konzernstruktur}
 \begin{figure}[htbp]
-\includegraphics[width=1\textwidth]{Images/konzernStruktur.png}
 \begin{center}
+\includegraphics[width=0.9\textwidth]{Images/konzernStruktur.png}
+
    %{\footnotesize In Anlehnung an: \cite{Hefner2001}, S. 100}
    \caption[Konzernstruktur in SAP ERP Financials]{Konzernstruktur in SAP ERP Financials}\label{abb2}
 \end{center}
 \end{figure}\noindent
 Bei der Einführung eines SAP ERP-Systems müssen die betrieblichen Organisationsstrukturen, die sich aus unterschiedlichen Gesellschaften und operativen Einheiten eines Konzerns zusammensetzt, in diesem abgebildet werden.
-Im Folgenden werden die Organisationseinheiten des internen und externen Rechnungswesens beschrieben. Abbildung~\ref{abb2} auf Seite \pageref{abb2} zeigt ein Beispiel einer Konzernstruktur im SAP Rechnungswesen.
+Jede Komponente des SAP ERP Systems hat ihre eigenen Organisationsstrukturen\footnote{Vgl. \cite{Klein2010}, S. 98}. Im Folgenden werden die Organisationseinheiten des internen und externen Rechnungswesens beschrieben. Abbildung~\ref{abb2} auf Seite \pageref{abb2} zeigt ein Beispiel einer Konzernstruktur im SAP Rechnungswesen.
 
 Der Mandant stellt die oberste Konzernhierarchieebene dar und bildet ein Konzernunternehmen mit allen zugehörigen Gesellschaften ab, deren Ergebnisse in das Konzernergebnis einfließen. Gesellschaftsübergreifende Daten und Parameter werden auf Mandantenebene abgelegt.
 %################## Kostenrechnungkreis?? #############
@@ -60,29 +61,153 @@ In der Komponente Management Accounting (CO) ist die zentrale Organisationseinhe
 \subsubsection{Asset Accounting} %Anlagenbuchhaltung FI-AA
 
 \subsection{Management Accounting (CO)} %CO
-\begin{floatingfigure}[htbpr]{0.43\textwidth} 
+Die Komponente Management Accounting (Controlling -- CO) bildet die, in Kapitel \ref{ssec:internesRechnungswesen} internes Rechnungswesen auf Seite \pageref{ssec:internesRechnungswesen}, beschriebenen Funktionen in SAP ERP Financials ab und gliedert sich in die drei Unterkomponenten Overhead Cost Controlling (CO-OM), Product Cost Accounting (CO-PC) und Profitability Analysis (CO-PA). Abbildung \ref{abb3} auf Seite \pageref{abb3} zeigt die vollständig in der Finanzbuchhaltung und Kostenrechnung integrierten Module. 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Images/managementAccounting.png}
+
+   {\footnotesize In Anlehnung an: \cite{SAPCOOMABC2001}, S. 11}
+   \caption[Management Accounting -- Das Modul CO]{Management Accounting -- Das Modul CO}\label{abb3}
+\end{center}
+\end{figure}\noindent
+\\Die zentrale Organisations- und Kontierungseinheit im Controlling ist der Kostenrechnungskreis (Vgl. s. Abb. \ref{abb4}, S. \pageref{abb4}). Mithilfe des Kostenrechnungskreises können Sie Ihr Unternehmen im Hinblick auf die Kostenrechnung im SAP-System buchungskreisübergreifend struktuieren\footnote{Vgl. \cite{Patel2009}, S. 291}\footnote{Vgl. \cite{Friedl2008}, S. 23}\footnote{Vgl. \cite{Klein2010}, S. 99}. SAP ERP stellt verschiedenen Kostenträger zur Verfügung, um alle anfallenden Kosten und Erlöse im Unternehmen zu strukturieren und möglichst exakt darstellen zu können. Der Begriff Kostenträger bzw. Kostensammler beschreibt Objekte wie Kostenstellen, Kostenarten und Innenaufträge\footnote{Vgl. \cite{Patel2009}, S. 208}. 
+\subsubsection{Overhead Cost Controlling}
+\begin{floatingfigure}[htbpr]{0.5\textwidth} 
 \includegraphics[width=0.5\textwidth]{Images/kostenRechnungskreis.png}
 \begin{flushright}
    %{\footnotesize In Anlehnung an: \cite{Hefner2001}, S. 100}
-   \caption[Kostenrechnungskreis in SAP ERP Financials]{Kostenrechnungskreis in SAP ERP Financials}\label{abb3}
+   \caption[Kostenrechnungskreis in SAP ERP Financials]{Kostenrechnungskreis in \\SAP ERP Financials}\label{abb4}
 \end{flushright}
 \end{floatingfigure}\noindent
-Die Komponente Management Accounting (Controlling -- CO) bildet die, in Kapitel \ref{ssec:internesRechnungswesen} internes Rechnungswesen auf Seite \pageref{ssec:internesRechnungswesen}, beschriebenen Funktionen in SAP ERP Financials ab. Alle Komponenten der Finanzbuchhaltung und Kostenrechnung sind vollständig integriert. Mithilfe des Kostenrechnungskreises können Sie Ihr Unternehmen im Hinblick auf die Kostenrechnung im SAP-System buchungskreisübergreifend struktuieren\footnote{Vgl. \cite{Patel2009}, S. 291}. SAP ERP stellt verschiedenen Kostenträger zur Verfügung, um alle anfallenden Kosten und Erlöse möglichst exakt darstellen zu können. Der Begriff Kostenträger bzw. Kostensammler beschreibt Objekte wie Kostenstellen, Kostenarten und Innenaufträge\footnote{Vgl. \cite{Patel2009}, S. 208}. 
-
-Die Kostenstellen in SAP werden unterhalb eines Kostenrechnungskreises in einer Kostenstellenhierarchie organisiert und entsprechen in der Regel der Struktur eines Unternehmens im Hinblick auf Büros, Abteilungen, Bereiche und Standorte. Der Kostenstellenverantwortliche wird in den Stammdaten der Kostenstellen hinterlegt und verantwortet sowohl die präzise Aufzeichnung und Abrechnung von Kosten in ihren Kostenstellen, sowie die Einhaltung des vorgesehenen Budgets\footnote{Vgl. \cite{Patel2009}, S. 296 f.}. Die Integration, z. B. die automatische Kostenstellenfindung in anderen SAP Komponenten, wird durch eine Zuordnung der Organisationseinheiten wie einem Buchungskreis oder einem Profit-Center ermöglicht.
-
-\subsubsection{Overhead Cost Controlling}
 \abk{Cost Center Accounting}{dt. Kostenstellenrechnung (SAP CO-OM-CCA)}
 \abk{Internal Order Accounting}{dt. Innenaufträge (SAP CO-OM-OPA)}
 \abk{Profit Center Accounting}{Profit-Center Rechnung (EC-PCA)}
 \abk{Overhead Cost Controlling}{dt. Gemeinkostenrechnung}
-Overhead Cost Controlling (dt. Gemeinkostenrechnung) ist vor allem den Gemeinkosten gewidmet. Gemeinkosten werden in der Regel Kosten bezeichnet, die im Gegensatz zu den direkten Kosten, nicht direkt den Produkten oder Dienstleistungen zugeordnet werden können. Eine genaue Aufzeichnung, Analyse, Verrechnung und Buchung von Gemeinkosten ist sehr komplex. 
+Overhead Cost Controlling (dt. Gemeinkostenrechnung) ist vor allem den Gemeinkosten gewidmet. Als Gemeinkosten\footnote{Personalkosten, Anlagekosten, Reisekosten, Beschaffungskosten, usw.} werden in der Regel Kosten bezeichnet, die im Gegensatz zu den direkten Kosten, nicht direkt den Produkten oder Dienstleistungen zugeordnet werden können. SAP ERP Financials unterstützt überwiegend mit der Kostenstellenrechnung, Innenauftragsrechnung und Prozesskostenrechnung die genaue Aufzeichnung, Analyse, Verrechnung und Buchung von Gemeinkosten\footnote{Vgl. \cite{Patel2009}, S. 288}\footnote{Vgl. \cite{SAPCOOMCCA2001}, S. 18}. 
+
+Als Fundament des Controllings in SAP gilt die Kostenstellenrechnung\footnote{Vgl. \cite{Klein2010}, S. 98}.
+Die Kostenstellen in SAP werden unterhalb eines Kostenrechnungskreises in einer Kostenstellenhierarchie organisiert und entsprechen in der Regel der Struktur eines Unternehmens im Hinblick auf Büros, Abteilungen, Bereiche und Standorte. Der Kostenstellenverantwortliche wird in den Stammdaten der Kostenstellen hinterlegt und verantwortet sowohl die präzise Aufzeichnung und Abrechnung von Kosten in ihren Kostenstellen, sowie die Einhaltung des vorgesehenen Budgets. Die Integration, z. B. die automatische Kostenstellenfindung in anderen SAP Komponenten, wird durch eine Zuordnung der Organisationseinheiten wie einem Buchungskreis oder einem Profit-Center ermöglicht\footnote{Vgl. \cite{Patel2009}, S. 296 f.}.
+Mithilfe der Kostenstellenrechnung wird im SAP-System eine präzise Kostenplanung, -erfassung und -aggregation vorgenommen. Es erfolgt eine Zuordnung der Gemeinkosten nach ihren Kostenarten\footnote{Vgl. \cite{SAPOMCEL2001}, S. 6} auf die Kostenstellen und im Rahmen der innerbetrieblichen Leistungsverrechnung können Kosten der Vorkostenstellen auf die Endkostenstellen weiterverrechnet werden\footnote{Vgl. \cite{Friedl2008}, S. 24}. Außerdem wird eine Rückverfolgung der Kosten von den zugewiesenen Werten bis zu deren Ursprung ermöglicht. 
+Auf diese Weise ist die Transparenz und Kontrolle der operativen Verfahren sichergestellt\footnote{Vgl. \cite{Patel2009}, S. 288}. 
+Die Kostenstellenrechnung gibt an, wo im Unternehmen welche Kosten angefallen sind\footnote{Vgl. \cite{Friedl2008}, S. 24}.
+
+Innenaufträge stellen eine weitere Möglichkeit zur Ermittlung der Istkosten einer internen Initiative, eines internen Jobs oder eines einfachen Projekts dar\footnote{Vgl. \cite{Patel2009}, S. 289}. Als klassisches Beispiel veranstaltet die Marketingabteilung einen Messeauftritt. Die anfallenden Kosten werden als Messekosten mit der Kostenstelle des Marketings verrechnet. In der Kostenstellenrechnung können nun Rückschlüsse auf die Kostenart und den Ursprung der Kosten gezogen werden. Wird für diesen Messeauftritt ein Innenauftrag erstellt, können die Kosten in Art und Ursprung diesem speziellen Vorgang zugeordnet und noch differenzierter betrachtet werden. Neben den Kosten können auch Messeerlöse auf den Innenauftrag verrechnet und ihnen gegenüber gestellt werden\footnote{Vgl. \cite{Klein2010}, S. 184 f.}. 
+So bieten Innenaufträge im Vergleich zu Kostenstellen eine höhere Transparenz, da die Kostenanalyse für einzelne Jobs und nicht für die gesamte Kostenstelle durchgeführt wird. Innenaufträge können während des vollständigen Lebenszyklus eines Jobs überwacht werden, indem fortlaufend ein Vergleich der Istkosten und -erlöse mit den Plankosten und -erlösen stattfindet. Die für Innenaufträge anfallenden Kosten können an weitere Innenaufträge, Kostenstellen usw. weiterberechnet werden\footnote{Vgl. \cite{Patel2009}, S. 289}.
+
+Die Geschäftsprozessplanung ist ein Vorgang, der in nahezu jedem Unternehmen anders gehandhabt wird. Branchenspezifische Besonderheiten, besondere organisatorische Strukturen und Verantwortlichkeiten erzwingen eine firmenindividuelle Gestaltung der Prozesse\footnote{Vgl. \cite{Friedl2008}, S. 24}. Einen Einblick in die Rentabilität dieser Geschäftsprozesse erlauben die zahlreichen Techniken und Methoden der Prozesskostenrechnung (CO-OM-ABC, Activity-Based Costing)\abk{Activity-Based Costing}{CO-OM-ABC, Prozesskostenrechnung}. Die Prozesskostenrechnung ermöglicht es, die Istkosten von Geschäfisprozessen, Produkten und Dienstleistungen transparent zu gestalten. Im Gegensatz zur verantwortungs- und funktionsorientierten Kostenstellenrechnung bildet sie eine vorgangsorientierte und funktionsübergreifende Sicht der Abläufe in Unternehmen ab. Dadurch ergänzt die Prozeßkostenrechnung die Kostenstellenrechnung\footnote{Vgl. \cite{SAPCOOMABC2001}, S. 11}. 
+
+Durch eine vollständige Integration zwischen der PKR und den Logistikkomponenten des SAP-Systems können Sie Betriebs-
+kosten präziser bestimmen, indem Sie die Prozesskosten anhand ope-
+rativer Parameter, wie z. B. der Anzahl an Kreditorenrechnungen.
+Bestellungen oder abgewickelten Kundenbesch werden, berechnen
+und zuweisen. Mit derTemplateverrechnung können Sie insbesondere
+komplexe und anpassbare Frameworks für die Kostenverrechnung von
+Geschäfisprozessen entwickeln\footnote{Vgl. \cite{Patel2009}, S. 289}.
+Durch den Einsatz der Prozesskostcnrechnung und die damit
+verbundene vollständige Integration mit logistischen und ope-rativen Systemen können Sie die Istkosten für Geschäftspro-zesse, Produkte und Dienstleistungen transparent darstellen.
+Insbesondere Template-Verrechnungen ermöglichen Ihnen.
+komplexe Kostenverrechnungen mithilfe von Geschäftsprozes-sen einfach vorzunehmen.
+> Die Prozesskostenrechnung unterstützt in hohem Maße aus-fuhrliche Kostenverrechnungen, die mit Gemeinkostenzu-schlagen nicht im notwendigen Umfang durchgeführt werden
+können. So können die Kosten einzelner Abteilungen reduziert
+und die gesamte Kette der Geschäftsprozesse optimien wer-
+den. Darüber hinaus können Sie milhilfe der Prozesskosien-
+rechnung die Produkikalkulation verbessern, indem Sie die
+Kosten den Geschäftsprozessen zuordnen, für die sie ursprüng-
+lich angefallen sind\footnote{Vgl. \cite{Patel2009}, S. 318 f.}.
+
+Die vollständige und nahtlose Integration der Gemeinkostenrechnung
+mit anderen SAP-Komponenten ermöglicht Ihnen die Rückverfolgung
+von im Kostenmanagememt zugeordneten Kosten bis zu den ursprünglich in SAP ERP Financials vorgenommenen Buchungen\footnote{Vgl. \cite{Patel2009}, S. 289}. 
+
+in diesem Kapitel wurde unter anderem behandelt, aufweiche Weise
+Sie im SAP-System Innenaufträge für einfache interne Projekte einsetzen können. 
+
+
 
 \subsubsection{Product Cost Accounting}
 \abk{Product Cost Controlling}{dt. Produktkosten-Controlling (CO-PC)}
+Unabhängig von der Branche bielcl jedes Unicmehmen ein Produkt
+oder eine Dienslleisiung an. Die Konirolle über die Produkikoslen ist
+lur jede Untemehmensan ein wesemlicher Aspeki der Winschatlich-keil.
+Die SAP-Komponente Produkt-kostencontrolling stellt ein präzises, detailliertes, transparentes und le-xibles Framework zur Kalkulation und Erfassung der Produkt- und
+Dienstleistungskosten eines Unternehmens bereit. Das Werkzeug für das Produktkostencontrolling verliigi z. B. über
+Funktionen zur Senkung der direkten oder indirekten Fenigungskos-ten. zur Kostenschätzung für eine potenzielle neue Produktlinie oder
+zur Kostenkalkulation von Änderungen an vorhandenen Produkten\footnote{Vgl. \cite{Patel2009}, S. 355}.
+Das SAP Projektsystein kann für alle Gemeinkosten-, Invesiilions- oder
+Fenigungsprojekte verwendet werden. 
+Der lexible Projekiemwurf und die Integration mit den SAP-Buch-haliungs- und -Logistikkomponenten ermöglichen Ihnen eine voll-ständige Kontrolle über die Art und Zielsetzung eines Projekts im
+SAP Projektsystem.
+> Die Imegralion mit anderen SAP-Komponenicn ermöglicht Ihnen
+die Inilüerung, Verwaltung und Durchfuhrung von End-to-End-GeschäfisVorgängen - vom Kundenangeboi bis zur abschließenden
+Lieferung - (Qr Kundenprojekie (z. B. Kundeneinzelfenigung).
+> Die präzise Kostenplanung und -Überwachung hinsichtlich des Bud-gets lässt Projekt Vorgänge transparent erscheinen und ermöglicht es
+Ihnen. Problemen schon zu einem frühen Zeitpunkt entgegenzuwir-ken.
+> Die Verfügbarkeit von Fakturierungsfunktionen. wie beispielsweise
+Faktuierungspläne und aufwandsbezogene Fakturierung, sowie die
+vollständige Integration mit dem Vertrieb erleichten Ihnen eine
+frühzeitige Planung von Projektcrlösen. sodass Sie sich einen Über-blick über einen möglichen Gewinn oder Verlust verschaffen kön-nen.
+> Das Projckt-Cash-Management ermöglicht Ihnen eine Bewertung
+und Überwachung der Kapitalbildung in Projekten, sodass Sic pro-aklive Maßnahmen bei der Verwaltung des Projckt-Cashlows
+ergreifen können.
+> Sie können den technischen sowie den winschaftlichen Fortschritt
+von Projekten mithilfe zahlreicher Standardbeichte oder gemäß
+Ihren Anforderungen erstellten Berichten überwachen, analysieren
+und bewerten\footnote{Vgl. \cite{Patel2009}, S. 253 f.}.
+Materialkosten
+ Fertigungskosten
+ Gemeinkosten
+ Herstellkosten
+. Vertrieb \& Verw- 
+= Selbstkosten
+
+Das Produktkostencontrolling bietet umfassende Unterstützung für
+verschiedene Fertigungsumgebungen, wie Lagerfertigung, Einzel-fertigung, Seienfertigung usw.
+> Mit der Produktkostenplanung können Sie Mateialkosten und Pro-duktkosten planen, um Ihre Kostenstruktur einschließlich der Ferti-gungskosten, Gemeinkosten, Materialkosten und Leistungskosten
+analysieren zu können.
+> Das Maierial-Ledger umerstülzt Sie bei der Durchführung von Ist-kalkulationen zur Bewertung Ihres Bestands unter Berücksichtigung
+unvermeidbarer Preisdifferenzen, und es ermöglicht Ihnen eine
+Bestandsführung mit mehreren Währungen oder Bewenungen.
+> Eine einfache Berechnung der Plankosten wird durch das Easy Cost
+Flanning gewährt. Auf Grundlage der Kalkulationsergebnisse wer-den Bestellanforderungen, Bestellungen, Wareneingänge und
+andere relevante Vorgänge automatisch ausgelöst.
+Sie haben Zugiff auf zahlreiche deiailliene Berichie, die über ver-schiedene Informaiionssysteme. unier anderem iur das Produktkos-tencontrolling, für das Material-Ledger und für Mischkalkulationen
+erstellt wurden\footnote{Vgl. \cite{Patel2009}, S. 392 f.}
+
+
 
 \subsubsection{Profitability Analysis} %CO-PA
 \abk{Profitability Analysis}{dt. Ergebnis- und Marktsegmentrechnung (SAP CO-PA)}
+Mit dem Verschwinden geograflscher und wirtschafilicher Grenzen
+sind auch die Märkte für Unternehmen gewachsen. Dieser Umstand
+schafft neben Chancen allerdings auch Herausforderungen, z. B. einen
+weltweiten Wettbewerb, unterschiedliche Kundenwünsche und eine
+steigende Anzahl an Faktoren, die die Gewinnmargen direkt und
+indirekt beeinflussen. Um einen Wettbewerbsvortei! zu erlangen und
+neue Strategien festlegen zu können, müssen Sie ermitteln können,
+wie sich Ihre einzelnen Produkte und Dienstleistungen in den unter-schiedlichen Marktsegmenten behaupten. Des Weiteren benötigen Sie
+aktuelle, nach Kunden und Produkten aufgeschlüsselte Vertriebs Infor-mationen. Die Ergebnis- und Marktsegmentrechnung. auch schlicht Ergebnis-rechnung genannt, (engl. Controlling - Profitabilily Analysis) in SAP
+ERP Financials bietet Ihnen alle nötigen Funktionen für ein anforde-rungsgerechtes Reporting in diesem Bereich, z.B. für eine Deckungs-beitragsrechnung. Sie können für verschiedene Marktsegmente
+Absatzzahlen. Umsätze. Kosten des Umsatzes. Vertriebskosten, Mar-gen etc. planen sowie Daten zu Geschäftsvorgängen aus anderen SAP-Komponenten erfassen und verteilen. Außerdem bietet die SAP-Ergeb-nisrechnung umfassende Reponingmöglichkeiten und erweiterte Ana-lysefunktionen. Durch den Einsatz des Informationssystems können Sie die in
+Geschäftsvorgängen mit Planwerten gesammelte Daten analysieren
+und einen detaillierten Vergleich der für Ihr Unternehmen wichtigen
+Rentabililätskriterien durchführen.Wenn Sie über einen Einsatz von SAP ERP Financials nachdenken,
+müssen Sie entscheiden, ob Sie die Ergebnisrechnung mit oder ohne
+Proßt-Center-Rechnung verwenden möchten. Die Profit-Center-Rech-nung bietet Ihnen eine eingeschränkte Funktion für die Reniabilitäts-analyse, die allerdings relativ einfach umzusetzen ist. Die Ergebnis-rechnung baut bei der Bereitstellung präziser Daten auch auf anderen
+SAP-Komponenten, insbesondere auf den Venieb auf. Wenn diese
+anderen SAP-Komponenten noch nicht in vollem Umfang genutzt wer-den, können Sie das Potenzial der Ergebnisrechnung unter Umständen
+nicht voll ausschöpfen. \footnote{Vgl. \cite{Patel2009}, S. 395 ff.}. 
+Die ProfU-Center-Rechnung bietet eine vereinfachte Umgebung zur
+Berechnung der Rentabilität einzelner Untemehmensbereiche.
+> Mit der Ergebnisrechnung können Sie die Rentabilität nach Produkt,
+Markt. Kunde, Spane und anderen Kiteien anhand von Finanzkon-ten und lexiblen, kundenspeziischen Werten analysieren.
+> Über die leistungsstarke Integration können Sie Daten aus anderen
+SAP-Komponenten, wie z. B. Finanzbuchhaltung, Vertieb. Mateial-wirtschaft. Gemeinkostencontrolling und Produktkostencontrolling
+usw., sammeln. 
+Mithilfe des umfangreichen Planungseinstiegs können Sie den
+Absatz, Erlös und die Rentabilität für verschiedene Ergebnisobjekte
+planen und den gesamten Planungsprozess beziehungsweise Teile
+davon aus unterschiedlichen Perspektiven betrachten.
+> Anhand der austuhrlichcn Berichte können Sic den Deckungsbei-trag, Marktsegment- und Kalkulalionsvergleiche usw. nach verschie-denen Merkmalen (z. B. Kunden, Produkte) oder Merkmalshierar-chien analysieren\footnote{Vgl. \cite{Patel2009}, S. 428 f.}.
 
 
 
