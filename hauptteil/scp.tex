@@ -1,1 +1,54 @@
-\section{SCP}
+\section{One.Finance der Deutschen Telekom AG}
+\subsection{Das Programm One.ERP}
+\abk{DTAG}{Deutsche Telekom AG}
+One.ERP ist eine strategische Initiative der DTAG (Deutsche Telekom AG), die die Vereinheitlichung der Datenmodelle und Prozesse auf Basis von SAP zum Ziel hat. Der Auftrag des Programms ist die Standardisierung der Daten, Prozesse und der IT-Landschaft in den Bereichen Finanzen, Human Resources, Einkauf und Logistik. Mit One.ERP wird ein lückenloses und überschneidungsfreies System entstehen, das für den Konzern weltweit einsetzbar ist. Die Vision: In Zukunft haben wir gleiche IT- und Datenstrukturen, gleiche Erfassungsprozesse und verwenden beim gleichen Vorgang den gleichen Beleg. Damit reduziert One.ERP die Komplexität und die Kosten für den Unterhalt der IT-Landschaft. Das Rechnungswesen (FI, CO) wird zukünftig in einem zentralen SAP ERP Financials System abgebildet, welches vom Programm One.ERP den Namen One.Finance erhalten hat. \\
+Sechs Fachprojekte, 16 Länder\footnote{Deutschland, Albanien, Bulgarien, Griechenland, Großbritannien, Kroatien, Mazedonien, Montenegro, Niederlande, Österreich, Polen, Rumänien, Slowakei, Tschechien, Ungarn und die USA} und rund 1.000 Mitarbeiter des Konzerns arbeiten weltweit gemeinsam an der Umsetzung des Programms One.ERP.
+
+\subsection{Standardisiertes Datenmodell}
+In der komplexen Systemlandschaft der Telekom waren bisher die unterschiedlichsten Systeme im Einsatz, die auf jeweils eigenen Datenmodellen basierten. 
+In dieser gewachsenen heterogenen Infrastruktur mussten die Schnittstellen so aufgebaut sein, dass trotz unterschiedlicher Datenmodelle eine Kommunikation zwischen den Systemen ermöglicht wurde. Die Pflege dieser individuell eingerichteten Schnittstellen erzeugte neben dem hohen Verwaltungsaufwand auch sehr hohe Kosten.
+Im Rahmen der Standardisierung und Vereinheitlichung durch das Programm One.ERP wird diese komplexe System- und Prozesslandschaft sukzessive auf eine Plattform bestehend aus einer geringen Anzahl an Standardsystemen reduziert. Diesen Systemen basieren auf dem gleichen Datenmodell, wodurch die Einrichtung von Schnittstellen vereinfacht wird und redundanter Pflegeaufwand entfällt.
+Um die bestehenden Prozesse in der neuen Plattform abbilden zu können, wurden die bestehenden Datenmodelle, sowie deren Entsprechung in den anderen Systemen, erfasst und in das neue standardisierte Datenmodell mit folgendem Umfang überführt. \\
+\begin{compactitem}    
+\item    Einkauf (Procurement)
+\item    Finance (Finanzen \& Controlling)
+\item    HWL (Handelswaren Logistik)
+\item    HR (Human Resources)
+\item    IT (Allgemeine Einstellungen)
+\item    PSL (Produktion Service \& Logistics)
+\end{compactitem}
+
+\subsection{Zukünftige Konzernstruktur (One.Finance)}
+tbd
+\subsection{Reporting - Data Hub (One.Finance)}
+Das Reporting-Gesamtkonzept sieht vor, dass die verschiedenen Informationsbedarfe der Berichtsempfänger durch unterschiedliche Berichtsprodukte bedient werden sollen. 
+Der Data Hub, ein SAP BW System\abk{SAP BW}{SAP Business Warehouse - Business Intelligence Lösung der SAP} (Business Intelligence Lösung der SAP), ist hierbei die zentrale Schnittstelle. Im Data Hub erfolgt die technische Bereitstellung von Daten aus dem transaktionalen System für bereichsspezifische Berichte von nachgelagerten Funktionen.
+Die Standardberichte in One.ERP basieren auf einem konzernweit vereinheitlichten Kontenplan, um ein gemeinsames Verständnis der dargestellten Ergebnisse zu fördern – getreu dem Credo „Eine Zahl – eine Wahrheit“. Alle Berichte sind damit so aufgebaut, dass konzernweit anwendbare Anforderungen an die externe oder interne Berichterstattung berücksichtigt sind und ein möglichst einfaches Arbeiten mit den Berichten ermöglicht wird. 
+Bei den Standardberichten handelt es sich in der Regel um eigenentwickelte Berichte, die mittels SAP-Standard-Reportingtools realisiert werden. Diese maßgeschneiderten Nicht-SAP-Standardberichte erfüllen eine hohe Prozesseffizienz und Datenqualität, um die Informationsanforderungen möglichst effektiv und effizient zu erfüllen.
+\subsubsection{Externe Standardberichte}
+Die externen Standardberichte sind die Basis für die externe Berichterstattung aller Gesellschaften des Konzerns Deutsche Telekom für den Einzelabschluss und ebenso für die Konzernberichterstattung. Die Berichte sind darüber hinaus auch die Grundlage für die Prüfung der Gesellschaft durch Wirtschaftsprüfer. 
+Weiterhin gibt es eine Kontrollfunktion durch die externen Standardberichte. Die Zahlen, die hier dargestellt werden, ermöglichen eine laufende Überprüfung der Liquidität und Wirtschaftlichkeit und erlauben es, konkrete Handlungsempfehlungen für einzelne Abteilungen zu erarbeiten und dem Management als Entscheidungsgrundlage zu dienen. Zur Erstellung dieser Standardberichte wird hierbei vollständig auf One.Finance und das neue Hauptbuch zurückgegriffen. \abk{One.Finance}{SAP ERP Financials im Programm One.ERP}\\
+Externe Standardberichte im One.ERP Data Hub:
+\begin{compactitem}  
+\item 	  Bilanz
+\item     Gewinn- und Verlustrechnung (Gesamtkostenverfahren)
+\item     Gewinn- und Verlustrechnung (Umsatzkostenverfahren)
+\item     Anlagenspiegel
+\item    Rückstellungsspiegel
+ \item    Eigenkapitalsveränderungsrechnung
+\item     Gesamtergebnisrechnung
+ \item    Kapitalflussrechnung (ohne Umgliederungen)
+\end{compactitem}
+\subsubsection{Interne Standardberichte}
+Die internen Standardberichte dienen der Analyse der Wirtschaftlichkeit und Effizienz sowie als Basis für die interne Steuerung. Neben den klassischen Kostenstellen-, Kostenträger- und Profit Center Berichten zählen auch die Berichte der wertschöpfungsorientierten Steuerung, das Konzernergebnisschema (GPS) sowie die Functional P\&L zu den internen Standardberichten, die insbesondere für die Controlling-Bereiche der Deutschen Telekom ein wesentliches Hilfsmittel darstellen. Zur Erstellung dieser Standardberichte wird hierbei auf die Module FI und CO in One.Finance zurückgegriffen.\\
+Interne Standardberichte im One.ERP Data Hub:
+\begin{compactitem}  
+\item 		Bilanz
+\item     Kostenstellenbericht
+\item     Kostenträgerbericht
+\item     Profit Center Bericht
+\item     Group Performance Statement (Konzernergebnisschema)
+\item     Operating Free Cash Flow
+\item     Operating Working Capital
+\item    Functional Profit and Loss Statement (FP\&L)
+\end{compactitem}
