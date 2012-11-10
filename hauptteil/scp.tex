@@ -19,7 +19,17 @@ Um die bestehenden Prozesse in der neuen Plattform abbilden zu können, wurden d
 \end{compactitem}
 
 \subsection{Zukünftige Konzernstruktur (One.Finance)}
-tbd
+Jede Legaleinheit des Konzerns Deutsche Telekom AG erhält einen eigenen standardisierten Buchungskreis auf einem System. Organisatorische Änderungen werden zukünftig System- und Datentechnisch effizient umgesetzt. Die Buchungskreise sind 1:1 den Gesellschaftsnummern im Organisationsmodell zugeordnet.
+Das Konzern-Controlling arbeitet mir einem einheitlichen Kostenrechnungskreis für den Gesamtkonzern Deutsche Telekom und ordnet alle Kostenstellen und Kostenträger einem eindeutigen Profit-Center zu. Profit-Center bilden sowohl die fachlichen Center (kleinste leistungserbringende Einheit) als auch die fachlichen Ergebnisbereiche (virtuelle Einheit nach Marktsicht) ab.
+Ein neuer konzernweiter Kontenplan ist verpflichtend anzuwenden und die Basis für das gesamte Berichtswesen. Berichtsinformationen werden leicht vergleichbar, können besser analysiert und ausgetauscht werden.
+Der standardisierte Kontenplan erfüllt die Anforderungen zur Bilanzierung und externen Berichterstattung gemäß IFRS, dem im Konzern führenden Rechnungslegungsstandard und auch weitere landesspezifische Standards werden umgesetzt.
+
+\subsection{Zukünftige Systemarchitektur (One.Finance)}
+One.Finance wird das Rechnungswesen der Deutschen Telekom AG ab 01.01.2013 mit den SAP ERP Financials Komponenten Hauptbuchhaltung (FI-GL), Kreditorenbuchhaltung (FI-AP), Debitorenbuchhaltung (FI-AR), Anlagenbuchhaltung (FI-AA) und Vertragskontokorrent (FI-CA) im Modul FI und mit den Komponenten Komponenten  Gemeinkosten-Controlling (CO-OM) und Produktkosten-Controlling (CO-PC) im Modul CO unterstützen.
+
+Für die zentrale Verwaltung und Verteilung von Stammdaten und Customizingeinstellungen wird auf die bereits bestehende Infrastruktur, das R/3 Master System und eine SAP NetWeaver Master Data Management (MDM) 7.1 Instanz, zurückgegriffen. Zusätzlich wird noch eine weitere ERP Instanz neu aufgebaut, das sog. R/3 Master (neu) System. 
+Aufgrund der Komplexität der jeweiligen Prozessabläufe bzw. Stammdatenobjekte, beliefert das Altsystem (R/3 Master System (alt)) weiterhin die Altwelt (d.h. außerhalb der One.ERP Welt) mit Stammdaten und mit den etablierten Pflegeprozessen.  Auch die Kreditoren- und Debitorenstammdaten werden weiterhin auf der alten R/3 Master Instanz verwaltet. Alle Multisystem-Objekte, werden hingegen auf dem R/3 Master (neu) System verwaltet und von diesem an die Systeme verteilt. 
+
 \subsection{Reporting - Data Hub (One.Finance)}
 Das Reporting-Gesamtkonzept sieht vor, dass die verschiedenen Informationsbedarfe der Berichtsempfänger durch unterschiedliche Berichtsprodukte bedient werden sollen. 
 Der Data Hub, ein SAP BW System\abk{SAP BW}{SAP Business Warehouse - Business Intelligence Lösung der SAP} (Business Intelligence Lösung der SAP), ist hierbei die zentrale Schnittstelle. Im Data Hub erfolgt die technische Bereitstellung von Daten aus dem transaktionalen System für bereichsspezifische Berichte von nachgelagerten Funktionen.
