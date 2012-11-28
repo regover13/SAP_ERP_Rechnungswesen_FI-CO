@@ -1,7 +1,7 @@
 \section{Rechnungswesen mit SAP ERP Financials}
 \subsection{Komponenten}
 \label{sec:Komponenten}
-Das Ziel von ERP-Systemen (Enterprise Resource Planning\abk{ERP}{Enterprise Resource Planning}) ist die Erfassung aller wesentlichen betrieblichen Abläufe zur Planung, Dokumentation und Steuerung. Die ERP-Software der Firma SAP ist eine branchenübergreifende Standardlösung, die sich an unterschiedlichste Anforderungen verschiedener Unternehmen anpassen lässt (Customizing\abk{Customizing}{Softwareanpassung an betriebs- und branchenspezifische Vorgaben}). Die Anwendungen erlauben eine ganzheitliche Abwicklung von abteilungs- und\\bereichsübergreifenden Prozessen der organisatorischen Einheit. Die Struktur von SAP ERP orientiert sich an den klassischen betriebswirtschaftlichen Funktionen eines Unternehmens. Auf der obersten Ebene finden sich die funktionalen Sichten:
+Das Ziel von ERP-Systemen (Enterprise Resource Planning\abk{ERP}{Enterprise Resource Planning}) ist die Erfassung aller wesentlichen betrieblichen Abläufe zur Planung, Dokumentation und Steuerung. Die ERP-Software der Firma SAP ist eine branchenübergreifende Standardlösung, die sich an unterschiedlichste Anforderungen verschiedener Unternehmen anpassen lässt (Customizing\abk{Customizing}{Softwareanpassung an betriebs- und branchenspezifische Vorgaben}). Die Anwendungen erlauben eine ganzheitliche Abwicklung von abteilungs- und\\bereichsübergreifenden Prozessen der organisatorischen Einheit. Die Struktur von SAP ERP orientiert sich an den klassischen betriebswirtschaftlichen Funktionen eines Unternehmens. Auf der obersten Ebene finden sich die funktionalen Sichten\footnote{Vgl. \cite{Bauer2009}, S. 78 f.}:
 \begin{compactitem}
 \item Finanzen
 \item Personalwirtschaft
@@ -11,7 +11,7 @@ Das Ziel von ERP-Systemen (Enterprise Resource Planning\abk{ERP}{Enterprise Reso
 \end{compactitem}
 Diese Struktur wird weiter in Module, Komponenten, Unterkomponenten und Transaktionen aufgeteilt. Während die Firma SAP für die Module und Komponenten des bereits 1992 erschienenen SAP R/3 noch klare Bezeichnungen etabliert hat, verzichtet sie im heutigen Marketing der Weiterentwicklung SAP ERP darauf\footnote{Vgl. \cite{Klein2010}, S. 9 f.}\footnote{Vgl. \cite{Hefner2001}, S. 25}. Für eine exakte Einordnung im Themenkomplex, werden in dieser Arbeit auch die Modul- und Komponentenbezeichnungen beigefügt.
 
-SAP ERP Financials als Teil von SAP ERP ist die Anwendung für die Unternehmenssicht Finanzen, welche folgende Module beinhaltet\footnote{Vgl. \cite{Hefner2001}, S. 27}:
+SAP ERP Financials als Teil von SAP ERP ist die Anwendung für die Unternehmenssicht Finanzen, welche folgende Module beinhaltet\footnote{Vgl. \cite{Hefner2001}, S. 27}\footnote{Vgl. \cite{Muir2009}, S. 72 ff.}
 \begin{compactitem}
 \item Financial Accounting (Finanzwesen -- FI)
 \item Management Accounting (Controlling -- CO)
@@ -22,7 +22,7 @@ SAP ERP Financials als Teil von SAP ERP ist die Anwendung für die Unternehmenss
 Diese Arbeit konzentriert sich auf das Rechnungswesen (FI, CO) mit SAP ERP Financials, welches in den Modulen Financial Accounting (FI) und Management Accounting (CO) abgebildet und in den folgenden Kapiteln näher behandelt wird\footnote{Vgl. \cite{Patel2009}, S. 23}.
 
 \subsection{Konzernstruktur}
-Bei der Einführung eines SAP ERP-Systems müssen die betrieblichen Organisationsstrukturen, die sich aus unterschiedlichen Gesellschaften und operativen Einheiten eines Konzerns zusammensetzt, in diesem abgebildet werden.
+Bei der Einführung eines SAP ERP-Systems müssen die betrieblichen Organisationsstrukturen, die sich aus unterschiedlichen Gesellschaften und operativen Einheiten eines Konzerns zusammensetzt, in diesem abgebildet werden\footnote{Vgl. \cite{Jacob2008}, S. 8}.
 Jedes Modul des SAP ERP Systems hat ihre eigenen Organisationsstrukturen\footnote{Vgl. \cite{Klein2010}, S. 98}. Im Folgenden werden die Organisationseinheiten des internen und externen Rechnungswesens beschrieben. Abbildung~\ref{abb2} auf Seite \pageref{abb2} zeigt ein Beispiel einer Konzernstruktur im SAP Rechnungswesen.
 
 Der Mandant stellt die oberste Konzernhierarchieebene dar und bildet ein Konzernunternehmen mit allen zugehörigen Gesellschaften ab, deren Ergebnisse in das Konzernergebnis einfließen. Gesellschaftsübergreifende Daten und Parameter werden auf Mandantenebene abgelegt.
@@ -44,7 +44,7 @@ Profit-Center sind verwaltungsorientierte Konzernstrukturen (z. B. Bereiche oder
 
 Für einzelne Segmente, die durch klassifizierende Merkmale beschrieben werden (z. B. Artikelgruppe, Kundengruppe, Land, Vertriebsweg), kann ein Ergebnis ausgewiesen werden. Die Segmente werden deshalb Ergebnisobjekte genannt. Obwohl bei der Definition von Segmenten keine Einschränkungen gelten, werden sie in der Regel von Profit-Centern abgeleitet und dienen in allen Gesellschaften zu Berichtszwecken. 
 
-Um die Betriebsaufwendungen der GuV im Umsatzkostenverfahren entsprechend betrieblicher Funktionen wie Finanzen, Personalwirtschaft, Beschaffung und Logistik, Produktion oder Vertrieb gruppiert auszuweisen, kann die Organisationseinheit Funktionsbereich verwendet werden\footnote{Vgl. \cite{Hefner2001}, S. 99 ff.}\footnote{Vgl. \cite{Friedl2008}, S. 29 ff.}\footnote{Vgl. \cite{Maassen2006}, S. 71 ff.}\footnote{Vgl. \cite{Patel2009}, S. 37 ff.}\footnote{Vgl. \cite{Padhi2011}, S. 16}\footnote{Vgl. \cite{SAPFI2001}, S. 18}.
+Um die Betriebsaufwendungen der GuV im Umsatzkostenverfahren entsprechend betrieblicher Funktionen wie Finanzen, Personalwirtschaft, Beschaffung und Logistik, Produktion oder Vertrieb gruppiert auszuweisen, kann die Organisationseinheit Funktionsbereich verwendet werden\footnote{Vgl. \cite{Hefner2001}, S. 99 ff.}\footnote{Vgl. \cite{Friedl2008}, S. 29 ff.}\footnote{Vgl. \cite{Maassen2006}, S. 71 ff.}\footnote{Vgl. \cite{Patel2009}, S. 37 ff.}\footnote{Vgl. \cite{Padhi2011}, S. 16}\footnote{Vgl. \cite{SAPFI2001}, S. 18}\footnote{Vgl. \cite{Jandt2008}, S. 101 f.}.
 
 \subsection{Financial Accounting (FI)} %FI
 Das Modul Financial Accounting (FI) lässt sich in der SAP ERP Solution Map unter SAP ERP Financials einordnen (s. Kapitel \ref{sec:Komponenten}). 
@@ -57,11 +57,11 @@ Die gesamten im Unternehmen vorkommende Informationen und Daten bzw. Buchungen l
 
 \subsubsection{General Ledger} \label{sec:gl}%Hauptbuch FI-GL -- #### ERST GEGEN ENDE SCHREIBEN!! Das neue Hauptbuch in FI vereint Funktionen aus FI und CO
 
-Das Hauptbuch (FI-GL) bietet dem Anwender ein Gesamtbild auf die verschiedenen Konten im Rahmen des externen Rechnungswesen. Das Hauptbuch bedient die Anforderungen des Gesetztgebers nach IFRS-Standard und den GoB (Grundsätzen ordnungsgemäßer Buchführung). Im wesentlichen weißt das Hauptbuch die Unternehmensbilanz aus und stellt die GuV dar. Ebenso wird die Sachkontenbuchhaltung geführt. Alle Geschäftsfälle werden im Hauptbuch summierend mit gebucht\footnote{Vgl. \cite{SAPFIGL}, S. 12 ff}. 
+Das Hauptbuch (FI-GL) bietet dem Anwender ein Gesamtbild auf die verschiedenen Konten im Rahmen des externen Rechnungswesen. Das Hauptbuch bedient die Anforderungen des Gesetztgebers nach IFRS-Standard und den GoB (Grundsätzen ordnungsgemäßer Buchführung). Im wesentlichen weißt das Hauptbuch die Unternehmensbilanz aus und stellt die GuV dar. Ebenso wird die Sachkontenbuchhaltung geführt. Alle Geschäftsfälle werden im Hauptbuch summierend mit gebucht\footnote{Vgl. \cite{SAPFIGL}, S. 12 ff}\footnote{Vgl. \cite{FICOForum2012}}. 
 
 In der Subledger (Nebenbuchhaltung) werden hingegen Einzelposten (Positionen) erfasst. Bestandteile des Subledger sind Asset Accounting, sowie die Debitorenbuchhaltung und Kreditorenbuchhaltung. Positionen der Nebenbuchhaltung finden sich im Hauptbuch als Mitbuchung wieder und gehen jeweils auf Konten wie Forderung oder Verbindlichkeiten-Konten im Hauptbuch ein.
 
-Im General Ledger werden Sachkontenstammdaten als sogenannte zeitüberdauernden Daten eines Sachkontos festgelegt. Der Kontenplan und das Kontenplanverzeichnis werden als Verzeichnis der "[…]Sachkontenstammsätze, die in einem Buchungskreis oder in mehreren Buchungskreisen benötigt werden" geführt."Der Kontenplan enthält zu jedem Sachkontenstammsatz die Kontonummer, die Kontobezeichnung und steuernde Informationen"\footnote{Vgl. \cite{SAPFIGL}, S. 25}. Hierbei kann ein operativer, zentraler oder dezentraler Kontenplan erstellt werden. Mittels Einsatz von Kontengruppen können Konsolidierungen von Eigenschaften bezüglich der Verwaltung von Stammdaten, Debitoren/- und Kreditorenbuchhaltung oder Sachkonten vorgenommen werden.
+Im General Ledger werden Sachkontenstammdaten als sogenannte zeitüberdauernden Daten eines Sachkontos festgelegt. Der Kontenplan und das Kontenplanverzeichnis werden als Verzeichnis der "[…]Sachkontenstammsätze, die in einem Buchungskreis oder in mehreren Buchungskreisen benötigt werden" geführt. "Der Kontenplan enthält zu jedem Sachkontenstammsatz die Kontonummer, die Kontobezeichnung und steuernde Informationen"\footnote{Vgl. \cite{SAPFIGL}, S. 25}\footnote{Vgl. \cite{Schuler2006}, S. 51}. Hierbei kann ein operativer, zentraler oder dezentraler Kontenplan erstellt werden. Mittels Einsatz von Kontengruppen können Konsolidierungen von Eigenschaften bezüglich der Verwaltung von Stammdaten, Debitoren/- und Kreditorenbuchhaltung oder Sachkonten vorgenommen werden.
 
 
 \subsubsection{Accounts receivable and payable} %Debitoren FI-AR %Kreditoren FI-AP
@@ -76,6 +76,7 @@ Wie auch in der Debitorenbuchhaltung werden die Buchungen der Kreditorenbuchhalt
 
 
 \subsubsection{Tax Accounting} %Steuern
+\footnote{Vgl. \cite{SAPFIAPAR2006}} %für Bezug zu interat. Steuerrecht und sonst. Features
 
 \subsubsection{Bank and Asset Accounting} %Bankbuchhaltung FI-BL Anlagenbuchhaltung FI-AA
 
@@ -110,7 +111,7 @@ Die zentrale Organisations- und Kontierungseinheit im Controlling ist der Kosten
    \caption[Kostenrechnungskreis in SAP ERP Financials]{Kostenrechnungskreis in \\SAP ERP Financials}\label{abb4}
 \end{flushright}
 \end{floatingfigure}\noindent
-Overhead Cost Controlling (dt. Gemeinkostenrechnung) ist vor allem den Gemeinkosten gewidmet. Als Gemeinkosten\footnote{Personalkosten, Anlagekosten, Reisekosten, Beschaffungskosten, usw.} werden in der Regel Kosten bezeichnet, die im Gegensatz zu den direkten Kosten, nicht direkt den Produkten oder Dienstleistungen zugeordnet werden können. SAP ERP Financials unterstützt überwiegend mit der Kostenstellenrechnung, Innenauftragsrechnung und Prozesskostenrechnung die genaue Aufzeichnung, Analyse, Verrechnung und Buchung von Gemeinkosten\footnote{Vgl. \cite{Patel2009}, S. 288}\footnote{Vgl. \cite{SAPCOOMCCA2001}, S. 18}. 
+Overhead Cost Controlling (dt. Gemeinkostenrechnung) ist vor allem den Gemeinkosten gewidmet. Als Gemeinkosten\footnote{Personalkosten, Anlagekosten, Reisekosten, Beschaffungskosten, usw. - s. a. \cite{Baier2009}, S. 554} werden in der Regel Kosten bezeichnet, die im Gegensatz zu den direkten Kosten, nicht direkt den Produkten oder Dienstleistungen zugeordnet werden können. SAP ERP Financials unterstützt überwiegend mit der Kostenstellenrechnung, Innenauftragsrechnung und Prozesskostenrechnung die genaue Aufzeichnung, Analyse, Verrechnung und Buchung von Gemeinkosten\footnote{Vgl. \cite{Patel2009}, S. 288}\footnote{Vgl. \cite{SAPCOOMCCA2001}, S. 18}. 
 
 Als Fundament des Controllings in SAP gilt die Kostenstellenrechnung\footnote{Vgl. \cite{Klein2010}, S. 98}.
 Die Kostenstellen in SAP werden unterhalb eines Kostenrechnungskreises in einer Kostenstellenhierarchie organisiert und entsprechen in der Regel der Struktur eines Unternehmens im Hinblick auf Büros, Abteilungen, Bereiche und Standorte. Der Kostenstellenverantwortliche wird in den Stammdaten der Kostenstellen hinterlegt und verantwortet sowohl die präzise Aufzeichnung und Abrechnung von Kosten in ihren Kostenstellen, sowie die Einhaltung des vorgesehenen Budgets. Die Integration, z. B. die automatische Kostenstellenfindung in anderen SAP Modulen, wird durch eine Zuordnung der Organisationseinheiten wie einem Buchungskreis oder einem Profit-Center ermöglicht\footnote{Vgl. \cite{Patel2009}, S. 296 f.}.
