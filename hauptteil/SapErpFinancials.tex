@@ -77,8 +77,14 @@ Wie auch in der Debitorenbuchhaltung werden die Buchungen der Kreditorenbuchhalt
 
 \subsubsection{Tax Accounting} %Steuern
 \abk{Tax Accounting}{Steuern}
-\footnote{Vgl. \cite{SAPFIAPAR2006}} %für Bezug zu interat. Steuerrecht und sonst. Features
-\footnote{Vgl. \cite{Patel2009}}
+SAP ERP Financials unterstützt unterschiedliche Steuerarten und Steuersysteme verschiedener Länder und Regionen. Dabei stellt das Tax Accounting keine eigenständige Komponente im ERP-System dar. Die Financial Accounting Komponenten Accounts receivalbe (Debitorenbuchhaltung, FI-AR) und payable (Kreditorenbuchhaltung, FI-AP) sowie das General Ledger (Hauptbuch, FI-GL), bieten umfangreiche Funktionen für die Berechnung, Buchung und Meldung der Steuern\footnote{Vgl. \cite{SAPFIAPAR2006}}. Die Steuerberechnungen können mithilfe flexibler Einstellungen an die geltenden Anforderungen angepasst werden und erfolgen weitestgehend automatisch, d. h. es ist keine Interaktion eines Sachbearbeiters notwendig. Die Steuerbuchungen können automatisch aber auch manuell angepasst werden, wenn dies aufgrund von Skonti, Abzügen oder anderen Abweichungen erforderlich ist\footnote{Vgl. \cite{Patel2009}, S. 106}.
+
+Abhängig vom geltenden Steuerrecht in verschiedenen Ländern, lassen sich die Einstellungen auf verschiedenen Ebenen vornehmen. SAP ERP Financials liefert mehr als 50 vorkonfigurierte länderspezifische Steuerberechnungsverfahren, die in der SAP Konzernstruktur den ausländischen Werken oder den Geschäftsorten zugewiesen und direkt zum Einsatz kommen können. Darüber hinaus können auch regionale Spezifika definiert werden\footnote{Vgl. \cite{Patel2009}, S. 110}.
+
+Je nach Steuerart und -vorschrift gelten für verschiedene Objekte auch unterschiedliche Regeln. So können Produkte, Debitoren und Kreditoren als steuerpflichtig oder steuerfrei klassifiziert und in der Steuerberechnung entsprechend berücksichtigt werden. Dabei kann auch zwischen nicht steuerrelevanten und steuerfreien Umsätzen unterschieden werden\footnote{Vgl. \cite{Patel2009}, S. 117 f.}.
+
+Mithilfe der umfassenden Funktionen des Steuermeldewesens in SAP ERP Financials können neben Analysen, Berichten und Abstimmungsmaßnahmen, auch für endgültige Steuererklärungen genutzt werden. Dabei werden auch elektronische Umsatzsteuervoranmeldungen unterstützt und können direkt an die Finanzbehörden übertragen werden\footnote{Vgl. \cite{Patel2009}, S. 117 f.}.
+
 
 \subsubsection{Bank Accounting} \abk{Bank Accounting}{Bankbuchhaltung Komponente FI-BL}
 Das Modul Bankbuchhaltung (FI-BL) dient zur Abwicklung von Geschäftsfällen mit Bankenbeteiligung (Zahlungen) zwischen den Geschäftspartnern. 
